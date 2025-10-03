@@ -55,6 +55,19 @@ body {
   color: rgba(0,0,0,0.15);
   box-shadow: inset 0 0 0 10px rgba(0,0,0,0.15);
 }
+.items {
+  position: relative; /* parent must be relative */
+}
+
+.item {
+  position: absolute; /* child must be absolute so left/top works */
+  cursor: grab;
+}
+
+.item:active {
+  cursor: grabbing;
+}
+
 
 .item:nth-child(9n+1) { background: dodgerblue;}
 .item:nth-child(9n+2) { background: goldenrod;}
